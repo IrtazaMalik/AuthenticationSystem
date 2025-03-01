@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../pics/img01.webp'); /* Your background image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.verify-otp-container {
+    background: rgba(31, 30, 30, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.verify-otp-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #fff; /* Change text color to white */
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    animation: slideInLeft 1.5s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* Text color is already set to white */
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite, slideInRight 2s ease;
+}
+
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.signup-btn:hover {
+    transform: scale(1.05);
+}
+
+.signup-btn:active {
+    transform: scale(0.98);
+}
+
+.message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #d9534f;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .verify-otp-container {
+        padding: 1.5rem;
+    }
+
+    .verify-otp-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .signup-btn {
+        font-size: 0.9rem;
+    }
+}

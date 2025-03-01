@@ -1,0 +1,123 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0e7ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Home Page Styling */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('./pics/img01.webp') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ensure content is above the background */
+.home-page > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1.5rem 3rem;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-message:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Container Styling */
+.button-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 123, 255, 0.9);
+  border: none;
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: transform 0.5s ease;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: -1;
+}
+
+.btn:hover {
+  background-color: rgba(0, 86, 179, 0.9);
+  transform: translateY(-5px);
+}
+
+.btn:hover::before {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+.btn:active {
+  background-color: rgba(0, 61, 122, 0.9);
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .welcome-message {
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

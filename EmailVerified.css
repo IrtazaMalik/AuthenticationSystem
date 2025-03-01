@@ -1,0 +1,106 @@
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../pics/img01.webp'); /* Your background image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.email-verified-container {
+    background: rgba(31, 30, 30, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.email-verified-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    color: #fff; /* Change text color to white */
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.email-verified-form p {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff; /* Change text color to white */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.redirect-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease infinite, slideInRight 2s ease;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.redirect-btn:hover {
+    transform: scale(1.05);
+}
+
+.redirect-btn:active {
+    transform: scale(0.98);
+}

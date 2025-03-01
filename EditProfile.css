@@ -1,0 +1,120 @@
+/* Ensure you have a default profile picture named default-profile-pic.png in your public folder */
+
+.edit-profile-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.7); /* Increased transparency */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+}
+
+.edit-profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.error-message {
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.success-message {
+    color: #5bc0de;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-button input {
+    display: none;
+}
+
+.upload-button span {
+    z-index: 1;
+}
+
+.profile-picture-preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    background-color: #fff;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.label span {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.submit-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
